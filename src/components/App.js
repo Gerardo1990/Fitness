@@ -1,17 +1,17 @@
 import React from "react";
-import { BrowserRouter, Route, Switch } from "react-router-dom";
+import { HashRouter, Route, Switch } from "react-router-dom";
 import ExercisesContainer from "../pages/ExercisesContainer";
 import ExerciseNewContainer from "../pages/ExerciseNewContainer";
 import NotFound from "../pages/404";
 
 const App = () => (
-	<BrowserRouter>
+	<HashRouter basename="/">
 		<Switch>
-			<Route exact path="/Fitness" component={ExercisesContainer} />
+			<Route exact path="/" component={ExercisesContainer} />
 			<Route exact path="/exercise/new" component={ExerciseNewContainer} />
 			<Route component={NotFound} />
 		</Switch>
-	</BrowserRouter>
+	</HashRouter>
 );
 
 export default App;
